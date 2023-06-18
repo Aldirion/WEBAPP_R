@@ -8,16 +8,6 @@ app.use(morgan('combined'))
 app.use(bodyParser.json())
 app.use(cors())
 
-app.get('/status', (req, res) => {
-     res.send({
-        message: 'hello, vue!'
-    })
-})
+app.get('/status', (req, res) => { res.send({ message: 'hello, vue!' }) })
 
-app.post('/register', (req, res) => {
-    res.send({
-        message: `Hello ${req.body.email}! Have fun!`
-    })
-})
-
-app.listen(process.env.PORT || 8081)
+app.listen(process.env.PORT || 8082)
